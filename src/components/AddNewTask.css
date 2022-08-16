@@ -15,8 +15,9 @@ form {
 
 .input-addnewtask {
   margin-right: 0.5rem;
+  border-radius: 20px;
   border: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
   width: 12rem;
   color: rgb(0, 80, 0);
 }
@@ -26,6 +27,7 @@ form {
 }
 
 .button-addnewtask {
+  cursor: pointer;
   border: none;
   border-radius: 20px;
   background-color: transparent;

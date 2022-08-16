@@ -23,11 +23,11 @@ const TaskList = () => {
               onClick={() => dispatch(checkTask(index))}
             >
               {task.completed ? (
+                <RiCheckboxCircleFill style={{ color: "green" }} />
+              ) : (
                 <RiCheckboxBlankCircleFill
                   style={{ color: "green", opacity: "25%" }}
                 />
-              ) : (
-                <RiCheckboxCircleFill style={{ color: "green" }} />
               )}
             </button>
             {task.task}

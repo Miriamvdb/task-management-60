@@ -36,7 +36,9 @@ const AddNewTask = () => {
           </button>
         </form>
       ) : (
-        <p>It's not possible to add more tasks</p>
+        <p>
+          It's not possible to add more that <b>{maxTasks}</b> tasks
+        </p>
       )}
     </div>
   );
