@@ -12,13 +12,18 @@ const initialState = {
 };
 
 export const taskAppSlice = createSlice({
-  name: "balance",
+  name: "taskApp",
   initialState,
-  reducers: {},
+  reducers: {
+    addNewTask: (state, action) => {
+      console.log("Reducer addNewTask", action);
+      state.tasks.push({ ...action.payload, id: state.tasks.length + 1 });
+    },
+  },
 });
 
 // Action creators are generated for each case reducer
 // function as we add cases to our reducer we will also
 // export the corresponding actions
-export const {} = taskAppSlice.actions;
+export const { addNewTask } = taskAppSlice.actions;
 export default taskAppSlice.reducer;
