@@ -6,14 +6,9 @@ import "./AddNewTask.css";
 
 const AddNewTask = () => {
   const [task, setTask] = useState("");
-
-  const dispatch = useDispatch();
-
   const allTasks = useSelector(selectAllTasks);
   const maxTasks = useSelector(selectMaxTasks);
-
-  console.log(maxTasks);
-  console.log(allTasks.length);
+  const dispatch = useDispatch();
 
   const submitTask = (event) => {
     event.preventDefault();
@@ -30,12 +25,15 @@ const AddNewTask = () => {
         <form onSubmit={submitTask}>
           <h2>Add a new task</h2>
           <input
+            className="input-addnewtask"
             type="text"
             value={task}
             onChange={(event) => setTask(event.target.value)}
             placeholder="Task to do"
           />
-          <button type="submit">Add new task</button>
+          <button className="button-addnewtask" type="submit">
+            +
+          </button>
         </form>
       ) : (
         <p>It's not possible to add more tasks</p>

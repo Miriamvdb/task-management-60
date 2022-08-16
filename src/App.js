@@ -5,7 +5,7 @@ import TaskList from "./components/TaskList";
 function App() {
   return (
     <div className="App">
-      <h1>Task Management</h1>
+      <h1 style={{ paddingLeft: "2rem", fontSize: 40 }}>Task Management</h1>
       <TaskList />
       <AddNewTask />
     </div>

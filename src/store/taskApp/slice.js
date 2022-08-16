@@ -17,10 +17,15 @@ export const taskAppSlice = createSlice({
   reducers: {
     addNewTask: (state, action) => {
       console.log("Reducer addNewTask", action);
-      state.tasks.push({ ...action.payload, id: state.tasks.length + 1 });
+      state.tasks.push({ id: state.tasks.length + 1, ...action.payload });
+    },
+    checkTask: (state, action) => {
+      console.log("Reducer checkTask", action);
+      const index = action.payload;
+      state.tasks[index].completed = !state.tasks[index].completed;
     },
   },
 });
 
-export const { addNewTask } = taskAppSlice.actions;
+export const { addNewTask, checkTask } = taskAppSlice.actions;
 export default taskAppSlice.reducer;
