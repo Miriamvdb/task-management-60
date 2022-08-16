@@ -22,8 +22,5 @@ export const taskAppSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer
-// function as we add cases to our reducer we will also
-// export the corresponding actions
 export const { addNewTask } = taskAppSlice.actions;
 export default taskAppSlice.reducer;
