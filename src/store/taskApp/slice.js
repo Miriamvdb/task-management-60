@@ -17,7 +17,10 @@ export const taskAppSlice = createSlice({
   reducers: {
     addNewTask: (state, action) => {
       console.log("Reducer addNewTask", action);
-      state.tasks.push({ id: state.tasks.length + 1, ...action.payload });
+      state.tasks.push({
+        id: Math.floor(Math.random() * 1000),
+        ...action.payload,
+      });
     },
     checkTask: (state, action) => {
       console.log("Reducer checkTask", action);
